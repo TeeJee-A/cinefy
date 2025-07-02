@@ -1,8 +1,8 @@
 import {
-  IconHome,
+  IconHomeFilled,
   IconUserCircle,
   IconMovie,
-  IconDeviceTv,
+  IconDeviceTvOldFilled,
 } from "@tabler/icons-react";
 
 export type MenuItem = {
@@ -20,9 +20,9 @@ export const menuItems: MenuItem[] = [
   {
     name: "Home",
     path: "/",
-    icon: IconHome,
+    icon: IconHomeFilled,
   },
   { name: "Profile", path: "/profile", icon: IconUserCircle },
   { name: "Movies", path: "/movies", icon: IconMovie },
-  { name: "TV Shows", path: "/tvshows", icon: IconDeviceTv },
+  { name: "TV Shows", path: "/tvshows", icon: IconDeviceTvOldFilled },
 ];

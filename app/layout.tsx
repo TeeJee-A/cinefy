@@ -31,15 +31,15 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${roboto.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
           <ReduxProviders>
-            <header className="fixed w-screen top-0 left-0">
+            <header className="fixed w-screen top-0 left-0 backdrop-blur-md z-50">
               <Navbar />
             </header>
-            <main className="w-screen h-[100dvh] overflow-y-auto overflow-x-hidden">
+            <main className="w-screen h-[100dvh] pt-20 overflow-y-auto overflow-x-hidden scrollbar-none">
               {children}
             </main>
           </ReduxProviders>

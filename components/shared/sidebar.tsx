@@ -34,17 +34,19 @@ const Sidebar = () => {
                 className="font-montserrat font-bold text-2xl flex flex-col  h-10 overflow-hidden text-white"
               >
                 <span
-                  className={`h-10 min-h-10 flex justify-center items-center ${
+                  className={`h-10 min-h-10 gap-3 flex justify-center items-center ${
                     ind === index ? "translate-y-[-100%]" : "translate-y-0"
                   } transition-transform duration-500`}
                 >
+                  <item.icon className="w-7 h-7" />
                   {item.name}
                 </span>
                 <span
-                  className={`h-10 min-h-10 flex justify-center items-center gap-1 ${
+                  className={`h-10 min-h-10 gap-3 flex justify-center items-center ${
                     ind === index ? "translate-y-[-100%]" : "translate-y-0"
                   } transition-transform duration-500`}
                 >
+                  <item.icon className="w-7 h-7" />
                   {item.name}
                 </span>
               </Link>

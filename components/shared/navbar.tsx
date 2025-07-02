@@ -8,15 +8,17 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import AvatarComp from "./avatar";
 import Sidebar from "./sidebar";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const isAuthenticated = useAppSelector(
     (state: RootState) => state.userInfo.isAuthenticated
   );
+  const router = useRouter();
 
   return (
     <div className="w-full px-3 flex flex-row md:justify-around justify-between items-center">
-      <div className="flex flex-row justify-center items-center gap-2">
+      <div className="flex flex-row justify-center items-center md:gap-2 gap-1">
         {!isAuthenticated && <Sidebar />}
         <Link href="/" className="outline-none ring-0">
           <Logo width={100} height={50} className="" />
@@ -24,6 +26,7 @@ const Navbar = () => {
       </div>
       {!isAuthenticated ? (
         <Button
+          onClick={() => router.push("/login")}
           variant="default"
           className="bg-primary text-white cursor-pointer"
         >
